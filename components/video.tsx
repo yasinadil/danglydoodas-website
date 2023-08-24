@@ -24,7 +24,7 @@ export default function VideoCard() {
         <p>Card Footer</p>
       </CardFooter> */}
         <video
-          className="h-full w-full rounded-lg"
+          className="h-full w-full rounded-lg aspect-video"
           src="/video-placeholder.mp4"
           controls
           autoPlay={true}
