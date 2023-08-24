@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -H 0.0.0.0 -p 8080",
-    "lint": "next lint"
+    "start": "serve _static -p 8080",
+    "lint": "next lint",
+    "export": "npm run build && next export && mv out _static"
   },
   "dependencies": {
     "@radix-ui/react-navigation-menu": "^1.1.3",
