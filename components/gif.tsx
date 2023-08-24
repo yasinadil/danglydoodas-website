@@ -18,13 +18,13 @@ export default function GIF() {
         <CardTitle>Card Title</CardTitle>
         <CardDescription>Card Description</CardDescription>
       </CardHeader> */}
-      <CardContent>
-        <img
-          className="w-full h-full rounded-2xl"
-          src={"/assets/gif.gif"}
-          alt="gif"
-        />
-      </CardContent>
+
+      <img
+        className="w-full h-full rounded-2xl"
+        src={"/assets/gif.gif"}
+        alt="gif"
+      />
+
       {/* <CardFooter>
         <p>Card Footer</p>
       </CardFooter> */}
