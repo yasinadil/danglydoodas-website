@@ -107,7 +107,7 @@ function App() {
       <div className="hidden md:block">
         <div className="absolute bottom-0 flex left-[50%] translate-x-[-50%] justify-center bg-neutral-900">
           <div className="px-2 md:px-8 w-screen">
-            <footer className="footer footer-center p-6 text-white">
+            <footer className="footer footer-center p-4 text-white">
               <div>
                 <p>Copyright © 2023 TDC, LLC All Rights Reserved.</p>
               </div>

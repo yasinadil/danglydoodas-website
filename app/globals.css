@@ -93,7 +93,7 @@ body {
 }
 
 .footer {
-  font-size: 1.3rem /* 14px */;
+  font-size: 1.2rem /* 14px */;
 }
 @media only screen and (max-width: 600px) {
   .footer {
