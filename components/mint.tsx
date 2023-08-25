@@ -85,21 +85,16 @@ export default function Mint() {
   return (
     <div className="flex items-center">
       <div className="flex flex-col justify-between h-fit w-full rounded-lg border border-neutral-200 bg-white text-neutral-950 shadow-sm dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-50 px-6 py-6">
-        <h1 className="text-center text-2xl pb-1">Mint Live Now!</h1>
+        <h1 className="text-center text-2xl font-semibold flex flex-col justify-start items-center">
+          FREE MINT LIVE NOW
+          <span className="text-center text-lg pb-1 font-medium">
+            (you pay the gas)
+          </span>
+        </h1>
+
         {/* <CardDescription className="text-center">
             Total Minted {totalMintedState} / 10,000
           </CardDescription> */}
-        <div className="line">
-          <div
-            className="color"
-            style={{
-              width: `${Number(totalMintedState) / 10000}%`,
-            }}
-          ></div>
-          <p className="text-white text-xs paraLine">
-            Total Minted {totalMintedState} / 10,000
-          </p>
-        </div>
 
         {/* <CardContent>
         
@@ -119,12 +114,12 @@ export default function Mint() {
         </Web3Button> */}
           <button
             onClick={() => mintNFT()}
-            className={`flex justify-between items-center bg-neutral-900 rounded-2xl ${
+            className={`flex justify-evenly items-center bg-neutral-900 rounded-2xl hover:bg-neutral-800 ${
               requestLoading || txLoading ? " pl-3 pr-0 " : " pr-2 pl-3 "
             } py-1.5 text-white my-4 w-[180px]`}
           >
             <span className="text-lg">
-              {requestLoading || txLoading ? "Minting..." : "Mint Now"}
+              {requestLoading || txLoading ? "MINTING..." : "MINT NOW"}
             </span>
 
             <span className="flex items-center text-xl">
@@ -167,6 +162,17 @@ export default function Mint() {
               )}
             </span>
           </button>
+        </div>
+        <div className="line mt-4">
+          <div
+            className="color"
+            style={{
+              width: `${Number(totalMintedState) / 10000}%`,
+            }}
+          ></div>
+          <p className="text-white text-lg paraLine">
+            Total Minted {totalMintedState} / 10,000
+          </p>
         </div>
       </div>
     </div>

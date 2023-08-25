@@ -36,9 +36,15 @@ export const RainbowConnectButton = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <Button onClick={openConnectModal} type="button">
-                    Connect Wallet
-                  </Button>
+                  <div className="md:w-[220px] md:h-[40px]">
+                    <Button
+                      className="w-full h-full text-[1.15rem]"
+                      onClick={openConnectModal}
+                      type="button"
+                    >
+                      CONNECT WALLET
+                    </Button>
+                  </div>
                 );
               }
               if (chain.unsupported) {

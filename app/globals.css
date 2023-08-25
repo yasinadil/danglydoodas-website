@@ -21,7 +21,7 @@ body {
 
 .line {
   background: rgb(37, 32, 32);
-  height: 20px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -90,4 +90,13 @@ body {
 
 [data-rk] .ju367vao {
   background: rgba(224, 232, 255, 0.05) !important;
+}
+
+.footer {
+  font-size: 1.3rem /* 14px */;
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    font-size: 1rem /* 14px */;
+  }
 }
