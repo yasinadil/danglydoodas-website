@@ -26,7 +26,7 @@ export default function NavbarMobile() {
         </div>
       </div>
       <div
-        className={`absolute top-0 left-0 h-screen glassEffect w-full  ${
+        className={`absolute top-0 left-0 h-[350px] glassEffect w-full z-50 border-b rounded-md  ${
           click ? "block" : "hidden"
         }`}
       >
@@ -49,7 +49,7 @@ export default function NavbarMobile() {
               ></path>
             </svg>
           </div>
-          <div className="flex flex-col gap-y-4 mt-24">
+          <div className="flex flex-col gap-y-4 mt-10">
             <a className="text-xl border-b text-center" href="/">
               Link 1
             </a>
