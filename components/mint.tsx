@@ -170,8 +170,10 @@ export default function Mint() {
               width: `${Number(totalMintedState) / 10000}%`,
             }}
           ></div>
-          <p className="text-white text-lg paraLine">
-            Total Minted {totalMintedState} / 10,000
+          <p className="text-white text-sm paraLine">
+            TOTAL MINTED{" "}
+            {totalMintedState?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+            / 10,000
           </p>
         </div>
       </div>

@@ -58,20 +58,22 @@ function App() {
             </div>
           </div>
 
-          <div className="flex justify-center items-center my-10">
+          <div className="flex justify-center items-center my-10 gap-x-2">
+            <label className="label">
+              <span className="label-text font-medium text-base">
+                CONTRACT ADDRESS:
+              </span>
+            </label>
             <div>
-              <label className="label">
-                <span className="label-text font-medium">CONTRACT ADDRESS</span>
-              </label>
               <div className="join">
                 <input
-                  className="input input-bordered join-item w-[300px] md:w-[500px]"
+                  className="input input-bordered join-item w-[300px] md:w-[440px] h-[2rem] min-h-[2rem]"
                   value={nft_address}
                   readOnly
                 />
 
                 <CopyToClipboard text={nft_address}>
-                  <button className="btn join-item rounded-r-full">
+                  <button className="btn join-item rounded-r-full h-[2rem] min-h-[2rem]">
                     <svg
                       width="15"
                       height="15"
