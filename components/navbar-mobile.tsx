@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import logo from "../public/assets/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NavbarMobile() {
   const [click, onClicked] = useState(false);
@@ -9,7 +10,10 @@ export default function NavbarMobile() {
     <div className="fixed w-[95vw] bg-[#75AFE9]">
       <div className="text-white py-4 md:py-4 ">
         <div className="flex justify-between items-center">
-          <Image className="w-[100px] h-[100px]" src={logo} alt="logo" />
+          <Link href={"https://danglydoodads.wtf"}>
+            <Image className="w-[100px] h-[100px]" src={logo} alt="logo" />
+          </Link>
+
           <div className="flex items-center">
             {/* <svg
               className={` ${click ? "animate-cross hidden" : ""}`}
