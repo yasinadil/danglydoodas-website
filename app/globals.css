@@ -4,8 +4,23 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 
+@font-face {
+  font-family: "Noto Bold";
+  src: url("../public//assets/fonts/Noto\ Sans\ JP\ Bold\ 700.otf");
+}
+
+@font-face {
+  font-family: "Noto Medium";
+  src: url("../public//assets/fonts/Noto\ Sans\ JP\ Medium\ 500.otf");
+}
+
+@font-face {
+  font-family: "Noto 400";
+  src: url("../public//assets/fonts/Noto\ Sans\ JP\ 400.otf");
+}
+
 body {
-  font-family: "Roboto";
+  font-family: "Noto 400";
 }
 
 .glassEffect {
@@ -20,7 +35,7 @@ body {
 }
 
 .line {
-  background: rgb(37, 32, 32);
+  background: rgb(255, 255, 255);
   height: 30px;
   display: flex;
   align-items: center;
@@ -32,7 +47,7 @@ body {
 }
 
 .color {
-  background: #ff5e00;
+  background: #3b94ed;
   height: 100%;
   text-transform: uppercase !important;
   text-transform: capitalize !important;
@@ -93,10 +108,44 @@ body {
 }
 
 .footer {
-  font-size: 1.1rem /* 14px */;
+  font-size: 20px /* 14px */;
 }
 @media only screen and (max-width: 600px) {
   .footer {
-    font-size: 1rem /* 14px */;
+    font-size: 15px /* 14px */;
   }
+}
+
+@keyframes cross {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-cross {
+  animation: cross 0.3s ease-in-out;
+}
+
+.social-icons__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: var(--icon-color, rgb(255, 255, 255));
+  transition: color 0.2s ease;
+}
+
+.social-icons__link:hover {
+  color: var(--icon-color-hover, #292a2e);
+}
+
+.social-icons__link svg {
+  width: var(--icon-size, 28px);
+  height: var(--icon-size, 28px);
+  object-fit: contain;
 }

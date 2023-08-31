@@ -9,7 +9,6 @@ import {
 } from "@rainbow-me/rainbowkit";
 
 import { configureChains, createConfig, mainnet, WagmiConfig } from "wagmi";
-import { goerli } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import {
@@ -30,9 +29,9 @@ export default function RainbowProvider({
   children: React.ReactNode;
 }) {
   const { chains, publicClient } = configureChains(
-    [goerli],
+    [mainnet],
     [
-      alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_KEY! }),
+      alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_MAINNET_KEY! }),
       publicProvider(),
     ]
   );

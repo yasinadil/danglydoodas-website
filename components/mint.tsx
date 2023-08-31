@@ -84,13 +84,16 @@ export default function Mint() {
 
   return (
     <div className="flex items-center">
-      <div className="flex flex-col justify-between h-fit w-full rounded-lg border border-neutral-200 bg-white text-neutral-950 shadow-sm dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-50 px-6 py-6">
-        <h1 className="text-center text-2xl font-semibold flex flex-col justify-start items-center">
+      <div className="flex flex-col justify-between h-fit w-full text-neutral-950  px-6 py-6">
+        <h1 className="text-center text-2xl font-semibold flex flex-col justify-start items-center text-white">
           FREE MINT LIVE NOW
           <span className="text-center text-lg pb-1 font-medium">
             (you pay the gas)
           </span>
         </h1>
+        <h2 className="text-white text-center text-xl">
+          Limit 1 NFT per wallet
+        </h2>
 
         {/* <CardDescription className="text-center">
             Total Minted {totalMintedState} / 10,000
@@ -114,18 +117,18 @@ export default function Mint() {
         </Web3Button> */}
           <button
             onClick={() => mintNFT()}
-            className={`flex justify-evenly items-center bg-neutral-900 rounded-2xl hover:bg-neutral-800 ${
+            className={`flex justify-evenly items-center text-black ${
               requestLoading || txLoading ? " pl-3 pr-0 " : " pr-2 pl-3 "
-            } py-1.5 text-white my-4 w-[180px]`}
+            } py-1.5 rounded-md my-4 w-[180px] bg-neutral-100 text-neutral-900 hover:bg-neutral-100/80 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80`}
           >
-            <span className="text-lg">
+            <span className="text-lg" style={{ fontFamily: "Noto 400" }}>
               {requestLoading || txLoading ? "MINTING..." : "MINT NOW"}
             </span>
 
             <span className="flex items-center text-xl">
               {requestLoading || txLoading ? (
                 <svg
-                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -156,24 +159,29 @@ export default function Mint() {
                 >
                   <path
                     d="M113.313,0C50.732,0,0,50.732,0,113.313s50.732,113.313,113.313,113.313s113.313-50.732,113.313-113.313  S175.894,0,113.313,0z M111.844,188.386l-44.78-63.344l44.78,26.218V188.386z M111.844,141.976l-45.083-26.408l45.083-19.748  V141.976z M111.844,92.647l-43.631,19.11l43.631-73.306V92.647z M114.75,38.429l44.244,73.6L114.75,92.647V38.429z M114.75,188.386  V151.26l44.78-26.218L114.75,188.386z M114.75,141.977V95.821l45.116,19.762L114.75,141.977z"
-                    fill="white"
+                    fill="black"
                   />
                 </svg>
               )}
             </span>
           </button>
         </div>
-        <div className="line mt-4">
+        <div className="line">
           <div
             className="color"
             style={{
-              width: `${Number(totalMintedState) / 10000}%`,
+              width: `${(Number(totalMintedState) / 10000) * 100}%`,
             }}
           ></div>
-          <p className="text-white text-sm paraLine">
-            TOTAL MINTED{" "}
-            {totalMintedState?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
-            / 10,000
+          <p className="text-sm paraLine flex gap-x-2">
+            <span>TOTAL MINTED</span>
+
+            <span>
+              {totalMintedState
+                ?.toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+              / 10,000
+            </span>
           </p>
         </div>
       </div>

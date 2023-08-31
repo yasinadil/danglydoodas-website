@@ -1,13 +1,7 @@
 "use client";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
-import gif from "../public/assets/gif.gif";
+import { Card } from "./ui/card";
+import Image from "next/image";
+import gif from "../public/assets/3.gif";
 
 import React from "react";
 
@@ -19,10 +13,11 @@ export default function GIF() {
         <CardDescription>Card Description</CardDescription>
       </CardHeader> */}
 
-      <img
-        className="w-full h-full rounded-2xl"
-        src={"/assets/gif.gif"}
+      <Image
+        className="w-[300px] h-[300px] md:w-[360px] md:h-[360px]"
+        src={gif}
         alt="gif"
+        priority={true}
       />
 
       {/* <CardFooter>

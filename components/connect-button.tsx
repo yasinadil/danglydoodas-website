@@ -38,6 +38,7 @@ export const RainbowConnectButton = () => {
                 return (
                   <div className="md:w-[180px] md:h-[40px]">
                     <Button
+                      variant={"secondary"}
                       className="w-full h-full text-[1rem]"
                       onClick={openConnectModal}
                       type="button"
@@ -49,7 +50,11 @@ export const RainbowConnectButton = () => {
               }
               if (chain.unsupported) {
                 return (
-                  <Button onClick={openChainModal} type="button">
+                  <Button
+                    variant={"secondary"}
+                    onClick={openChainModal}
+                    type="button"
+                  >
                     Wrong network
                   </Button>
                 );
@@ -57,6 +62,7 @@ export const RainbowConnectButton = () => {
               return (
                 <div style={{ display: "flex", gap: 12 }}>
                   <Button
+                    variant={"secondary"}
                     onClick={openChainModal}
                     style={{ display: "flex", alignItems: "center" }}
                     type="button"
@@ -83,7 +89,11 @@ export const RainbowConnectButton = () => {
                     )}
                     {chain.name}
                   </Button>
-                  <Button onClick={openAccountModal} type="button">
+                  <Button
+                    variant={"secondary"}
+                    onClick={openAccountModal}
+                    type="button"
+                  >
                     {account.displayName}
                     {account.displayBalance
                       ? ` (${account.displayBalance})`
