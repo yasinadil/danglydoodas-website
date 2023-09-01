@@ -1,7 +1,7 @@
 "use client";
 import { Card } from "./ui/card";
 import Image from "next/image";
-import gif from "../public/assets/3.gif";
+import gif from "../public/assets/preview.gif";
 
 import React from "react";
 

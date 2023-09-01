@@ -8,6 +8,7 @@ import { useContractWrite, useContractRead } from "wagmi";
 import { ToastContainer, toast } from "react-toastify";
 import { useWaitForTransaction } from "wagmi";
 import "react-toastify/dist/ReactToastify.css";
+import { RainbowConnectButton } from "./connect-button";
 
 const NFT_ABI = require("../config/NFT_ABI.json");
 
@@ -84,24 +85,29 @@ export default function Mint() {
   });
 
   return (
-    <div className="flex items-center">
-      <div className="flex flex-col justify-between h-fit w-full text-neutral-950  px-4 py-6 sm:py-0">
-        <h1 className="text-center text-[24px] font-semibold flex flex-col justify-start items-center text-white">
-          FREE MINT LIVE NOW
-          <span className="text-center text-lg pb-1 font-semibold">
-            (you pay the gas)
-          </span>
-        </h1>
-        <h2 className="text-white text-center text-lg">
-          Limit 1 NFT per wallet
-        </h2>
-
+    <div className="flex items-center h-full">
+      <div className="flex flex-col justify-evenly h-full w-full text-neutral-950  px-4 py-6 sm:py-0">
+        <div className="flex justify-center">
+          {" "}
+          <RainbowConnectButton />
+        </div>
+        <div>
+          <h1 className="text-center text-[24px] font-semibold flex flex-col justify-start items-center text-white">
+            FREE MINT LIVE NOW
+            <span className="text-center text-lg pb-1 font-semibold">
+              (you pay the gas)
+            </span>
+          </h1>
+          <h2 className="text-white text-center text-[22px]">
+            Limit 1 NFT per wallet
+          </h2>
+        </div>
         <div className="flex justify-center">
           <button
             onClick={() => mintNFT()}
             className={`flex justify-evenly items-center text-black ${
               requestLoading || txLoading ? " pl-3 pr-0 " : " pr-2 pl-3 "
-            } py-1 rounded-md my-4 w-[150px] bg-neutral-100 text-neutral-900 hover:bg-neutral-100/80 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80`}
+            } py-1 rounded-md w-[150px] bg-neutral-100 text-neutral-900 hover:bg-neutral-100/80 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80`}
           >
             <span className="text-[16px]" style={{ fontFamily: "Noto 400" }}>
               {requestLoading || txLoading ? "MINTING..." : "MINT NOW"}
