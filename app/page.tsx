@@ -30,9 +30,9 @@ function App() {
           <Navbar />
         </div>
       </div>
-      <div className="flex justify-center items-center md:h-[calc(100vh-212px)]">
+      <div className="flex justify-center items-center">
         <div className="px-2 md:px-0 w-screen max-w-[1240px] ">
-          <div className="flex-col pt-36 md:pt-0 py-0 md:py-auto">
+          <div className="flex-col pt-36 md:pt-10 md:pb-0">
             {/* <article className="prose md:max-w-none pb-14">
                 <h1>Garlic bread with cheese: What the science tells us</h1>
                 <p>
@@ -58,7 +58,7 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-center items-center py-8 gap-x-2">
+          <div className="flex flex-col md:flex-row justify-center items-center py-8  md:py-12 gap-x-2">
             <label className="label">
               <span className="label-text font-medium text-[15px] md:text-base text-white">
                 CONTRACT ADDRESS:
@@ -175,13 +175,12 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="hidden md:block">
-        {/* 800 */}
-        <div className="absolute bottom-0 flex left-[50%] translate-x-[-50%] justify-center bg-[#75AFE9]">
+      <div className="hidden md:block ">
+        <div className="flex justify-center bg-[#75AFE9] 2xl:absolute 2xl:bottom-0 2xl:left-[50%] 2xl:translate-x-[-50%]">
           <div className="w-screen max-w-[1000px]">
             <footer className="flex justify-between pb-8 text-white">
-              <div>
-                <p className="text-[20px] absolute top-0 flex left-[50%] translate-x-[-50%]">
+              <div className="w-[1000px]">
+                <p className="text-[20px] text-center">
                   Copyright © 2023 TDC, LLC All Rights Reserved.
                 </p>
               </div>
