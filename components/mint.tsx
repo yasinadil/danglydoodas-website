@@ -99,7 +99,7 @@ export default function Mint() {
               (you pay the gas)
             </span>
           </h1>
-          <h2 className="text-white text-center text-[22px]">
+          <h2 className="text-white text-center text-[24px] font-semibold">
             Limit 1 NFT per wallet
           </h2>
         </div>

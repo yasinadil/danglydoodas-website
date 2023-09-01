@@ -37,12 +37,12 @@ function App() {
         theme="dark"
       />
       <div className="flex justify-center bg-[#75AFE9]">
-        <div className="px-2 md:px-[12px] w-screen max-w-[1000px]">
+        <div className="px-2 md:px-[12px] w-screen max-w-[1050px]">
           <Navbar />
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="flex items-center w-screen max-w-[940px] sm:h-[calc(100vh-216px)] px-2 md:px-0">
+        <div className="flex items-center w-screen max-w-[940px] sm:h-[calc(100vh-204px)] px-2 md:px-0">
           <div>
             <div className="relative flex flex-col gap-y-8 pt-36 sm:pt-0">
               <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 items-center place-content-center md:space-y-0 md:space-x-4 pt-0 sm:pt-0">

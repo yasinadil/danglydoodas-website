@@ -5,11 +5,11 @@ import Link from "next/link";
 
 export default function NavbarMain() {
   return (
-    <div className="py-[12px]">
+    <div className="pt-[10px] pb-[12px]">
       <div className="flex justify-between items-center px-2 text-white">
         <Link href={"https://danglydoodads.wtf"}>
           <Image
-            className="w-[100px] h-[100px]"
+            className="w-[90px] h-[90px]"
             src={logo}
             alt="logo"
             priority={true}
