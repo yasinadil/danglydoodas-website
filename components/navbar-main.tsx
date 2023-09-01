@@ -9,7 +9,7 @@ export default function NavbarMain() {
       <div className="flex justify-between items-center px-2 text-white">
         <Link href={"https://danglydoodads.wtf"}>
           <Image
-            className="w-[110px] h-[110px]"
+            className="w-[100px] h-[100px]"
             src={logo}
             alt="logo"
             priority={true}

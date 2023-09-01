@@ -37,7 +37,7 @@ function App() {
         theme="dark"
       />
       <div className="flex justify-center bg-[#75AFE9]">
-        <div className="px-2 md:px-[12px] w-screen max-w-[1100px]">
+        <div className="px-2 md:px-[12px] w-screen max-w-[1000px]">
           <Navbar />
         </div>
       </div>
