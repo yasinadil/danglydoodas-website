@@ -8,6 +8,7 @@ import { useContractWrite, useContractRead } from "wagmi";
 import { ToastContainer, toast } from "react-toastify";
 import { useWaitForTransaction } from "wagmi";
 import "react-toastify/dist/ReactToastify.css";
+
 const NFT_ABI = require("../config/NFT_ABI.json");
 
 export default function Mint() {
@@ -95,26 +96,7 @@ export default function Mint() {
           Limit 1 NFT per wallet
         </h2>
 
-        {/* <CardDescription className="text-center">
-            Total Minted {totalMintedState} / 10,000
-          </CardDescription> */}
-
-        {/* <CardContent>
-        
-      </CardContent> */}
-
         <div className="flex justify-center">
-          {/* <Web3Button
-          contractAddress={nft_address}
-          contractAbi={NFT_ABI}
-          theme="dark"
-          // Call the name of your smart contract function
-          action={(contract) => contract.call("mint", [])}
-          onSuccess={(result) => console.log(result)}
-          onError={(error) => console.log(error)}
-        >
-          <span>BUY NOW</span>
-        </Web3Button> */}
           <button
             onClick={() => mintNFT()}
             className={`flex justify-evenly items-center text-black ${

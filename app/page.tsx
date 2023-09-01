@@ -44,14 +44,18 @@ function App() {
       <div className="flex justify-center">
         <div className="flex items-center w-screen max-w-[940px] sm:h-[calc(100vh-238px)] px-2 md:px-0">
           <div>
-            <div className="flex flex-col gap-y-8 pt-36 sm:pt-0">
-              <div className="flex justify-center">
+            <div className="relative flex flex-col gap-y-8 pt-36 sm:pt-0">
+              {/* <div className="flex justify-center">
                 <RainbowConnectButton />
-              </div>
+              </div> */}
               <div className="grid grid-cols-1 sm:grid-cols-3 space-y-4 items-center place-content-center md:space-y-0 md:space-x-4 pt-10 sm:pt-0">
                 <GIF />
                 <Mint />
                 <VideoCard />
+              </div>
+              <div className="absolute top-0 left-[50%] translate-x-[-50%]">
+                {" "}
+                <RainbowConnectButton />
               </div>
             </div>
 
