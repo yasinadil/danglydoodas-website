@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function NavbarMain() {
   return (
-    <div className="pt-[10px] pb-[12px]">
+    <div className="py-[12px]">
       <div className="flex justify-between items-center px-2 text-white">
         <Link href={"https://danglydoodads.wtf"}>
           <Image

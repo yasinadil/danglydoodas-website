@@ -145,7 +145,7 @@ body {
 }
 
 .social-icons__link svg {
-  width: var(--icon-size, 28px);
-  height: var(--icon-size, 28px);
+  width: var(--icon-size, 24px);
+  height: var(--icon-size, 24px);
   object-fit: contain;
 }
