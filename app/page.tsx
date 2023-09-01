@@ -50,7 +50,7 @@ function App() {
                   <RainbowConnectButton />
                 </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 space-y-4 items-center place-content-center md:space-y-0 md:space-x-4 pt-10 sm:pt-0">
+              <div className="grid grid-cols-1 sm:grid-cols-3 space-y-4 items-center place-content-center md:space-y-0 md:space-x-4 pt-0 sm:pt-0">
                 <GIF />
                 <Mint />
                 <VideoCard />
@@ -61,7 +61,7 @@ function App() {
               </div> */}
             </div>
 
-            <div className="flex items-center mt-8 gap-x-2">
+            <div className="flex items-center pt-10 pb-4 sm:pb-0 sm:mt-8 gap-x-2">
               <span className="w-[230px] label-text font-medium text-[15px] md:text-[15px] text-white text-right">
                 CONTRACT ADDRESS:
               </span>

@@ -86,10 +86,11 @@ export default function Mint() {
 
   return (
     <div className="flex items-center h-full">
-      <div className="flex flex-col justify-evenly h-full w-full text-neutral-950  px-4 py-6 sm:py-0">
-        <div className="flex justify-center">
-          {" "}
-          <RainbowConnectButton />
+      <div className="flex flex-col justify-evenly h-[260px] sm:h-full w-full text-neutral-950 px-4 py-4 sm:py-0">
+        <div className="hidden sm:block">
+          <div className="flex justify-center">
+            <RainbowConnectButton />
+          </div>
         </div>
         <div>
           <h1 className="text-center text-[24px] font-semibold flex flex-col justify-start items-center text-white">
