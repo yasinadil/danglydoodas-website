@@ -51,7 +51,7 @@ function App() {
               {/* <ConnectWallet theme="light" btnTitle="Connect Wallet" /> */}
               <RainbowConnectButton />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 place-content-center md:space-y-0 md:space-x-4 pt-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 place-content-center md:space-y-0 md:space-x-4 pt-10 px-4">
               <GIF />
               <Mint />
               <VideoCard />
