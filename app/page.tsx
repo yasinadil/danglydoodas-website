@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 // import { ConnectWallet } from "@thirdweb-dev/react";
 import GIF from "@/components/gif";
@@ -11,6 +11,17 @@ import { ToastContainer } from "react-toastify";
 import { nft_address } from "../config/config";
 
 function App() {
+  const [tooltipVisible, setTooltipVisible] = useState(false);
+
+  const handleCopyClick = () => {
+    // Logic to copy the input value goes here
+
+    setTooltipVisible(true);
+
+    setTimeout(() => {
+      setTooltipVisible(false);
+    }, 3000);
+  };
   return (
     <div className="min-h-screen bg-[#75AFE9]">
       <ToastContainer
@@ -30,71 +41,66 @@ function App() {
           <Navbar />
         </div>
       </div>
-      <div className="flex justify-center items-center">
-        <div className="px-2 md:px-0 w-screen max-w-[1240px] ">
-          <div className="flex-col pt-36 md:pt-10 md:pb-0">
-            {/* <article className="prose md:max-w-none pb-14">
-                <h1>Garlic bread with cheese: What the science tells us</h1>
-                <p>
-                  For years parents have espoused the health benefits of eating
-                  garlic bread with cheese to their children, with the food
-                  earning such an iconic status in our culture that kids will
-                  often dress up as warm, cheesy loaf for Halloween.
-                </p>
-                <p>
-                  But a recent study shows that the celebrated appetizer may be
-                  linked to a series of rabies cases springing up around the
-                  country.
-                </p>
-              </article> */}
-            <div className="flex justify-center">
-              {/* <ConnectWallet theme="light" btnTitle="Connect Wallet" /> */}
-              <RainbowConnectButton />
+      <div className="flex justify-center">
+        <div className="flex items-center w-screen max-w-[940px] sm:h-[calc(100vh-238px)] px-2 md:px-0">
+          <div>
+            <div className="flex flex-col gap-y-8 pt-36 sm:pt-0">
+              <div className="flex justify-center">
+                <RainbowConnectButton />
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 space-y-4 items-center place-content-center md:space-y-0 md:space-x-4 pt-10 sm:pt-0">
+                <GIF />
+                <Mint />
+                <VideoCard />
+              </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 place-content-center md:space-y-0 md:space-x-4 pt-10 px-4">
-              <GIF />
-              <Mint />
-              <VideoCard />
-            </div>
-          </div>
 
-          <div className="flex flex-col md:flex-row justify-center items-center py-8  md:py-12 gap-x-2">
-            <label className="label">
-              <span className="label-text font-medium text-[15px] md:text-base text-white">
+            <div className="flex items-center mt-8 gap-x-2">
+              <span className="w-[230px] label-text font-medium text-[15px] md:text-[15px] text-white text-right">
                 CONTRACT ADDRESS:
               </span>
-            </label>
-            <div>
-              <div className="join">
-                <input
-                  className="input input-bordered join-item w-[200px] md:w-[440px] h-[2rem] min-h-[2rem]"
-                  value={nft_address}
-                  readOnly
-                />
 
-                <CopyToClipboard text={nft_address}>
-                  <button className="btn join-item rounded-r-full h-[2rem] min-h-[2rem]">
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+              <div className="absolute left-[50%] translate-x-[-50%]">
+                <div className="join">
+                  <input
+                    className="input input-bordered join-item w-[200px] md:w-[412px] h-[2rem] min-h-[2rem]"
+                    value={nft_address}
+                    readOnly
+                  />
+
+                  <CopyToClipboard text={nft_address}>
+                    <div
+                      className={`${tooltipVisible && "tooltip tooltip-open"}`}
+                      data-tip={"address copied"}
                     >
-                      <path
-                        d="M1 9.50006C1 10.3285 1.67157 11.0001 2.5 11.0001H4L4 10.0001H2.5C2.22386 10.0001 2 9.7762 2 9.50006L2 2.50006C2 2.22392 2.22386 2.00006 2.5 2.00006L9.5 2.00006C9.77614 2.00006 10 2.22392 10 2.50006V4.00002H5.5C4.67158 4.00002 4 4.67159 4 5.50002V12.5C4 13.3284 4.67158 14 5.5 14H12.5C13.3284 14 14 13.3284 14 12.5V5.50002C14 4.67159 13.3284 4.00002 12.5 4.00002H11V2.50006C11 1.67163 10.3284 1.00006 9.5 1.00006H2.5C1.67157 1.00006 1 1.67163 1 2.50006V9.50006ZM5 5.50002C5 5.22388 5.22386 5.00002 5.5 5.00002H12.5C12.7761 5.00002 13 5.22388 13 5.50002V12.5C13 12.7762 12.7761 13 12.5 13H5.5C5.22386 13 5 12.7762 5 12.5V5.50002Z"
-                        fill="currentColor"
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
-                  </button>
-                </CopyToClipboard>
+                      <button
+                        className="btn join-item rounded-r-full h-[2rem] min-h-[2rem]"
+                        onClick={handleCopyClick}
+                      >
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 9.50006C1 10.3285 1.67157 11.0001 2.5 11.0001H4L4 10.0001H2.5C2.22386 10.0001 2 9.7762 2 9.50006L2 2.50006C2 2.22392 2.22386 2.00006 2.5 2.00006L9.5 2.00006C9.77614 2.00006 10 2.22392 10 2.50006V4.00002H5.5C4.67158 4.00002 4 4.67159 4 5.50002V12.5C4 13.3284 4.67158 14 5.5 14H12.5C13.3284 14 14 13.3284 14 12.5V5.50002C14 4.67159 13.3284 4.00002 12.5 4.00002H11V2.50006C11 1.67163 10.3284 1.00006 9.5 1.00006H2.5C1.67157 1.00006 1 1.67163 1 2.50006V9.50006ZM5 5.50002C5 5.22388 5.22386 5.00002 5.5 5.00002H12.5C12.7761 5.00002 13 5.22388 13 5.50002V12.5C13 12.7762 12.7761 13 12.5 13H5.5C5.22386 13 5 12.7762 5 12.5V5.50002Z"
+                            fill="currentColor"
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </CopyToClipboard>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div className="block md:hidden">
         <div className="flex justify-center bg-[#75AFE9]">
           <div className="px-2 md:px-8 w-screen">
@@ -178,7 +184,7 @@ function App() {
       <div className="hidden md:block ">
         <div className="flex justify-center bg-[#75AFE9] 2xl:absolute 2xl:bottom-0 2xl:left-[50%] 2xl:translate-x-[-50%]">
           <div className="w-screen max-w-[1000px]">
-            <footer className="flex justify-between pb-8 text-white">
+            <footer className="flex justify-between py-8 text-white">
               <div className="w-[1000px]">
                 <p className="text-[20px] text-center">
                   Copyright © 2023 TDC, LLC All Rights Reserved.
