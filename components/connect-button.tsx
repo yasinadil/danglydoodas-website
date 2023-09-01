@@ -36,7 +36,7 @@ export const RainbowConnectButton = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <div className="md:w-[142px] md:h-[35px]">
+                  <div className="w-[142px] h-[35px]">
                     <Button
                       variant={"secondary"}
                       className="w-full h-full text-[0.9rem] p-0"
