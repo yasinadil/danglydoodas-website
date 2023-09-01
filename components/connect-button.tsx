@@ -36,10 +36,10 @@ export const RainbowConnectButton = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <div className="w-[142px] h-[35px]">
+                  <div className="w-[180px] h-[35px]">
                     <Button
                       variant={"secondary"}
-                      className="w-full h-full text-[0.9rem] p-0"
+                      className="w-full h-full text-[18px] p-0"
                       onClick={openConnectModal}
                       type="button"
                     >
@@ -90,6 +90,7 @@ export const RainbowConnectButton = () => {
                     {chain.name}
                   </Button> */}
                   <Button
+                    className="text-[18px]"
                     variant={"secondary"}
                     onClick={openAccountModal}
                     type="button"

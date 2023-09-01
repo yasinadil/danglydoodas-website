@@ -16,20 +16,23 @@ export default function NavbarMain() {
           />
         </Link>
         <div
-          className="flex flex-row gap-x-[60px] text-[24px]"
+          className="flex flex-row gap-x-[60px]"
           style={{ fontFamily: "Noto 400" }}
         >
           <a
-            className="hover:underline hover:underline-offset-8 text-right"
+            className="hover:underline hover:underline-offset-8 text-right text-[20px] leading-[1.8rem]"
             href="https://danglydoodads.wtf"
           >
             dandlydoodads
           </a>
-          <a className="underline underline-offset-8 text-right" href="/">
+          <a
+            className="underline underline-offset-8 text-right text-[20px] leading-[1.8rem]"
+            href="/"
+          >
             mint.danglydoodads
           </a>
           <a
-            className="hover:underline hover:underline-offset-8 text-right"
+            className="hover:underline hover:underline-offset-8 text-right text-[20px] leading-[1.8rem]"
             href="https://danglydoodads.wtf/other-schtuff"
           >
             other schtuff

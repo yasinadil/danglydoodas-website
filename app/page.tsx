@@ -45,12 +45,7 @@ function App() {
         <div className="flex items-center w-screen max-w-[940px] sm:h-[calc(100vh-238px)] px-2 md:px-0">
           <div>
             <div className="relative flex flex-col gap-y-8 pt-36 sm:pt-0">
-              <div className="block sm:hidden">
-                <div className="flex justify-center">
-                  <RainbowConnectButton />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 space-y-4 items-center place-content-center md:space-y-0 md:space-x-4 pt-0 sm:pt-0">
+              <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 items-center place-content-center md:space-y-0 md:space-x-4 pt-0 sm:pt-0">
                 <GIF />
                 <Mint />
                 <VideoCard />
@@ -61,8 +56,8 @@ function App() {
               </div> */}
             </div>
 
-            <div className="flex items-center pt-10 pb-4 sm:pb-0 sm:mt-8 gap-x-2">
-              <span className="w-[230px] label-text font-medium text-[15px] md:text-[15px] text-white text-right">
+            <div className="flex items-center pt-12 sm:pt-10 pb-8 sm:pb-0 gap-x-2">
+              <span className="w-[230px] label-text font-medium text-[15px] md:text-[15px] text-white text-right hidden sm:block">
                 CONTRACT ADDRESS:
               </span>
 
@@ -192,11 +187,11 @@ function App() {
           <div className="w-screen max-w-[1000px]">
             <footer className="flex justify-between py-8 text-white">
               <div className="w-[1000px]">
-                <p className="text-[20px] text-center">
+                <p className="text-[18px] text-center absolute left-[50%] translate-x-[-50%]">
                   Copyright © 2023 TDC, LLC All Rights Reserved.
                 </p>
               </div>
-              <div className="w-[192px] flex justify-around">
+              <div className="w-[194px] flex justify-around">
                 <a
                   className="social-icons__link"
                   href="https://opensea.io/collection/danglydoodads"

@@ -86,8 +86,8 @@ export default function Mint() {
 
   return (
     <div className="flex items-center h-full">
-      <div className="flex flex-col justify-evenly h-[260px] sm:h-full w-full text-neutral-950 px-4 py-4 sm:py-0">
-        <div className="hidden sm:block">
+      <div className="flex flex-col justify-evenly h-[350px] sm:h-full w-full text-neutral-950 px-4 py-4 sm:py-0">
+        <div className="">
           <div className="flex justify-center">
             <RainbowConnectButton />
           </div>
@@ -108,9 +108,9 @@ export default function Mint() {
             onClick={() => mintNFT()}
             className={`flex justify-evenly items-center text-black ${
               requestLoading || txLoading ? " pl-3 pr-0 " : " pr-2 pl-3 "
-            } py-1 rounded-md w-[150px] bg-neutral-100 text-neutral-900 hover:bg-neutral-100/80 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80`}
+            } py-1 rounded-md w-[180px] bg-neutral-100 text-neutral-900 hover:bg-neutral-100/80 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80`}
           >
-            <span className="text-[16px]" style={{ fontFamily: "Noto 400" }}>
+            <span className="text-[20px]" style={{ fontFamily: "Noto 400" }}>
               {requestLoading || txLoading ? "MINTING..." : "MINT NOW"}
             </span>
 
