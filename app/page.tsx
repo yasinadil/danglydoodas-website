@@ -37,12 +37,12 @@ function App() {
         theme="dark"
       />
       <div className="flex justify-center bg-[#75AFE9]">
-        <div className="px-2 md:px-[12px] w-screen max-w-[1240px]">
+        <div className="px-2 md:px-[12px] w-screen max-w-[1100px]">
           <Navbar />
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="flex items-center w-screen max-w-[940px] sm:h-[calc(100vh-238px)] px-2 md:px-0">
+        <div className="flex items-center w-screen max-w-[940px] sm:h-[calc(100vh-226px)] px-2 md:px-0">
           <div>
             <div className="relative flex flex-col gap-y-8 pt-36 sm:pt-0">
               <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 items-center place-content-center md:space-y-0 md:space-x-4 pt-0 sm:pt-0">
@@ -57,10 +57,6 @@ function App() {
             </div>
 
             <div className="flex items-center pt-12 sm:pt-10 pb-8 sm:pb-0 gap-x-2">
-              <span className="w-[230px] label-text font-medium text-[15px] md:text-[15px] text-white text-right hidden sm:block">
-                CONTRACT ADDRESS:
-              </span>
-
               <div className="absolute left-[50%] translate-x-[-50%]">
                 <div className="join">
                   <input
@@ -187,7 +183,7 @@ function App() {
           <div className="w-screen max-w-[1000px]">
             <footer className="flex justify-between py-8 text-white">
               <div className="w-[1000px]">
-                <p className="text-[18px] text-center absolute left-[50%] translate-x-[-50%]">
+                <p className="text-[16px] text-center absolute left-[50%] translate-x-[-50%]">
                   Copyright © 2023 TDC, LLC All Rights Reserved.
                 </p>
               </div>
