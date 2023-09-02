@@ -14,7 +14,7 @@ export default function GIF() {
       </CardHeader> */}
 
       <Image
-        className="w-[300px] h-[300px] md:w-[280px] md:h-[280px]"
+        className="w-[100%] h-auto max-w-[500px]"
         src={gif}
         alt="gif"
         priority={true}

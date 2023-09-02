@@ -5,10 +5,10 @@ import NavbarMain from "./navbar-main";
 export default function Navbar() {
   return (
     <div>
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <NavbarMain />
       </div>
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <NavbarMobile />
       </div>
     </div>

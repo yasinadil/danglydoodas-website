@@ -86,20 +86,20 @@ export default function Mint() {
 
   return (
     <div className="flex items-center h-full">
-      <div className="flex flex-col justify-evenly h-[350px] sm:h-full w-full text-neutral-950 px-4 py-4 sm:py-0">
+      <div className="flex flex-col justify-evenly h-[300px] sm:h-[220px] lg:h-full w-full text-neutral-950 px-4 py-4 sm:py-0">
         <div className="">
           <div className="flex justify-center">
             <RainbowConnectButton />
           </div>
         </div>
         <div>
-          <h1 className="text-center text-[24px] font-semibold flex flex-col justify-start items-center text-white">
+          <h1 className="text-center text-[18px] lg:text-[24px] font-semibold flex flex-col justify-start items-center text-white">
             FREE MINT LIVE NOW
             <span className="text-center text-lg pb-1 font-semibold">
               (you pay the gas)
             </span>
           </h1>
-          <h2 className="text-white text-center text-[24px] font-semibold">
+          <h2 className="text-white text-center text-[18px] lg:text-[24px] font-semibold">
             Limit 1 NFT per wallet
           </h2>
         </div>

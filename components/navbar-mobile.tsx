@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function NavbarMobile() {
   const [click, onClicked] = useState(false);
   return (
-    <div className="fixed w-[95vw] bg-[#75AFE9] z-50">
+    <div className="fixed w-[96vw] bg-[#75AFE9] z-50">
       <div className="text-white py-4 md:py-4 ">
         <div className="flex justify-between items-center">
           <Link href={"https://danglydoodads.wtf"}>

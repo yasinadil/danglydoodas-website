@@ -10,6 +10,11 @@ import { RainbowConnectButton } from "@/components/connect-button";
 import { ToastContainer } from "react-toastify";
 import { nft_address } from "../config/config";
 
+const style = {
+  "--tooltip-color": "white",
+  "--tooltip-text-color": "black",
+} as React.CSSProperties;
+
 function App() {
   const [tooltipVisible, setTooltipVisible] = useState(false);
 
@@ -36,19 +41,20 @@ function App() {
         pauseOnHover
         theme="dark"
       />
-      <div className="flex justify-center bg-[#75AFE9]">
-        <div className="px-2 md:px-[12px] w-screen max-w-[1050px]">
+      <div className="flex lg:justify-center  bg-[#75AFE9]">
+        <div className="px-2 md:px-[12px] w-screen max-w-[80vw]">
           <Navbar />
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="flex items-center w-screen max-w-[940px] sm:h-[calc(100vh-204px)] px-2 md:px-0">
+        <div className="flex justify-center items-center w-screen sm:max-w-[940px] xl:max-w-[80vw] xl:h-[calc(100vh-204px)] px-2 md:px-10 lg:px-0">
+          {/* xl:h-[calc(100vh-204px)] */}
           <div>
-            <div className="relative flex flex-col gap-y-8 pt-36 sm:pt-0">
-              <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 items-center place-content-center md:space-y-0 md:space-x-4 pt-0 sm:pt-0">
-                <GIF />
-                <Mint />
+            <div className="relative flex flex-col gap-y-8 pt-36 lg:pt-0">
+              <div className="grid grid-cols-1 lg:grid-cols-3 space-y-4 items-center place-content-center lg:space-y-0 md:space-x-4 pt-0 sm:pt-0">
                 <VideoCard />
+                <Mint />
+                <GIF />
               </div>
               {/* <div className=" hidden sm:block absolute top-0 left-[50%] translate-x-[-50%]">
                 {" "}
@@ -60,15 +66,19 @@ function App() {
               <div className="absolute left-[50%] translate-x-[-50%]">
                 <div className="join">
                   <input
-                    className="input input-bordered join-item w-[200px] md:w-[412px] h-[2rem] min-h-[2rem]"
+                    className="input input-bordered join-item w-[200px] md:w-[412px] h-[2rem] min-h-[2rem] rounded-md"
                     value={nft_address}
                     readOnly
                   />
 
                   <CopyToClipboard text={nft_address}>
                     <div
-                      className={`${tooltipVisible && "tooltip tooltip-open"}`}
-                      data-tip={"address copied"}
+                      className={`${
+                        tooltipVisible &&
+                        "tooltip tooltip-open tooltip-primary text-white"
+                      }`}
+                      style={style}
+                      data-tip={"DDDD contract address copied"}
                     >
                       <button
                         className="btn join-item rounded-r-full h-[2rem] min-h-[2rem]"
@@ -181,7 +191,7 @@ function App() {
       <div className="hidden md:block ">
         <div className="flex justify-center bg-[#75AFE9] 2xl:absolute 2xl:bottom-0 2xl:left-[50%] 2xl:translate-x-[-50%]">
           <div className="w-screen max-w-[1000px]">
-            <footer className="flex justify-between py-8 text-white">
+            <footer className="flex justify-between py-8 text-white px-8 lg:px-0">
               <div className="w-[1000px]">
                 <p className="text-[16px] text-center absolute left-[50%] translate-x-[-50%]">
                   Copyright © 2023 TDC, LLC All Rights Reserved.
