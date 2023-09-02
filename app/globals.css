@@ -12,11 +12,13 @@
 @font-face {
   font-family: "Noto Medium";
   src: url("../public//assets/fonts/Noto\ Sans\ JP\ Medium\ 500.otf");
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Noto 400";
   src: url("../public//assets/fonts/Noto\ Sans\ JP\ 400.otf");
+  font-weight: 400;
 }
 
 body {
@@ -149,9 +151,3 @@ body {
   height: var(--icon-size, 24px);
   object-fit: contain;
 }
-
-/* @media screen and (min-height: 720px), screen and (min-width: 1280px) {
-  .heightVary {
-    height: calc(100vh - 204px);
-  }
-} */
