@@ -47,7 +47,7 @@ function App() {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="flex justify-center items-center w-screen sm:max-w-[940px] xl:max-w-[80vw] xl:h-[calc(100vh-204px)] px-2 md:px-10 lg:px-0">
+        <div className="flex justify-center items-center w-screen sm:max-w-[940px] xl:max-w-[80vw] xl:h-[calc(100vh-232px)] px-2 md:px-10 lg:px-0">
           {/* xl:h-[calc(100vh-204px)] */}
           <div>
             <div className="relative flex flex-col gap-y-8 pt-36 lg:pt-0">
@@ -191,7 +191,7 @@ function App() {
       <div className="hidden md:block ">
         <div className="flex justify-center bg-[#75AFE9] 2xl:absolute 2xl:bottom-0 2xl:left-[50%] 2xl:translate-x-[-50%]">
           <div className="w-screen max-w-[1000px]">
-            <footer className="flex justify-between pb-9 text-white px-8 lg:px-0">
+            <footer className="flex justify-between py-8 text-white px-8 lg:px-0">
               <div className="w-[1000px]">
                 <p className="text-[20px] text-center absolute left-[50%] translate-x-[-50%]">
                   Copyright © 2023 TDC, LLC All Rights Reserved.
