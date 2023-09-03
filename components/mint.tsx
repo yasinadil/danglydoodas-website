@@ -100,7 +100,7 @@ export default function Mint() {
             </span>
           </h1>
           <h2 className="text-white text-center text-[18px] lg:text-[24px] font-semibold">
-            Limit 1 NFT per wallet
+            Limit 1 NFT per address
           </h2>
         </div>
         <div className="flex justify-center">
