@@ -9,7 +9,7 @@ export default function NavbarMain() {
       <div className="flex justify-between items-center px-2 text-white">
         <Link href={"https://danglydoodads.wtf"}>
           <Image
-            className="w-[90px]  h-[90px]"
+            className="w-[120px]  h-[120px]"
             src={logo}
             alt="logo"
             priority={true}
@@ -17,19 +17,19 @@ export default function NavbarMain() {
         </Link>
         <div className="flex flex-row gap-x-[60px]">
           <a
-            className="hover:underline hover:underline-offset-8 hover:font-medium  text-right text-[19px] leading-[1.8rem] "
+            className="hover:underline hover:underline-offset-8 hover:font-medium  text-right text-[24px] leading-[1.8rem] "
             href="https://danglydoodads.wtf"
           >
             danglydoodads
           </a>
           <a
-            className="underline underline-offset-8 text-right font-medium text-[19px] leading-[1.8rem]"
+            className="underline underline-offset-8 text-right font-medium text-[24px] leading-[1.8rem]"
             href="/"
           >
             mint.danglydoodads
           </a>
           <a
-            className="hover:underline hover:underline-offset-8 hover:font-medium text-right text-[19px] leading-[1.8rem] "
+            className="hover:underline hover:underline-offset-8 hover:font-medium text-right text-[24px] leading-[1.8rem] "
             href="https://danglydoodads.wtf/other-schtuff"
           >
             other schtuff

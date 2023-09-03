@@ -8,7 +8,7 @@ export default function VideoCard() {
       <div className="flex justify-center items-center aspect-video">
         <video
           className="h-auto w-full max-w-[500px] aspect-video border-none filter-none"
-          src="/assets/DDDD-FREE-MINT.mp4"
+          src="/assets/DDDDFreeMint.mp4"
           controls
           autoPlay={true}
         />

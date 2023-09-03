@@ -42,7 +42,7 @@ function App() {
         theme="dark"
       />
       <div className="flex lg:justify-center  bg-[#75AFE9]">
-        <div className="px-2 md:px-[12px] w-screen max-w-[80vw]">
+        <div className="px-2 w-screen max-w-[1240px]">
           <Navbar />
         </div>
       </div>
@@ -191,9 +191,9 @@ function App() {
       <div className="hidden md:block ">
         <div className="flex justify-center bg-[#75AFE9] 2xl:absolute 2xl:bottom-0 2xl:left-[50%] 2xl:translate-x-[-50%]">
           <div className="w-screen max-w-[1000px]">
-            <footer className="flex justify-between py-8 text-white px-8 lg:px-0">
+            <footer className="flex justify-between pb-9 text-white px-8 lg:px-0">
               <div className="w-[1000px]">
-                <p className="text-[16px] text-center absolute left-[50%] translate-x-[-50%]">
+                <p className="text-[20px] text-center absolute left-[50%] translate-x-[-50%]">
                   Copyright © 2023 TDC, LLC All Rights Reserved.
                 </p>
               </div>
